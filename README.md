@@ -1,11 +1,9 @@
 # UnoCSS React Layout
 
-Simple Layout with React, UnoCSS(with Icons), OpenProps, Sass and Postcss.
+Simple Layout with React, UnoCSS, OpenProps, Sass and Postcss.
 
 <img
 src="./Screenshot.png"
-width="500"
-height="500"
 loading="lazy"
 alt="uno css layout screenshot"
 />
@@ -25,40 +23,30 @@ Clone the project
 
 ```bash
   git clone https://github.com/AliBagheri2079/UnoCSS-OpenProps-Sass-Layout.git
-
-
 ```
 
 Install dependencies
 
 ```bash
   pnpm install
-
-
 ```
 
 Start the server
 
 ```bash
   pnpm run dev
-
-
 ```
 
 Format the Component
 
 ```bash
   pnpm run format
-
-
 ```
 
 Lint(Check) the Component
 
 ```bash
   pnpm run check
-
-
 ```
 
 ## 🚀 About Me
