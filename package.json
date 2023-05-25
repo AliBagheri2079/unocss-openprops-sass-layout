@@ -6,7 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format:style": "pnpm run check:style --fix",
+    "format:script": "rome format src/",
+    "format:script:fix": "pnpm run format:script --write",
+    "format": "pnpm run format:style && pnpm run format:script:fix",
+    "check:style": "stylelint src/**/*.scss",
+    "check:script": "rome check src/",
+    "check:script:fix": "pnpm run check:script --apply-unsafe",
+    "check": "pnpm run check:style && pnpm run check:script:fix"
   },
   "dependencies": {
     "react": "^18.2.0",
