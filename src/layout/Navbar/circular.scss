@@ -1,0 +1,154 @@
+@import "./vendors.scss";
+
+.nav-toggle {
+  display: inline-block;
+  inline-size: var(--size-fluid-6);
+  block-size: var(--size-fluid-6);
+  padding: var(--size-2);
+
+  position: fixed;
+  z-index: var(--layer-important);
+  inset-inline: auto var(--size-7);
+  inset-block: var(--size-7) auto;
+
+  background-color: var(--pink-2);
+  line-height: 0.5;
+  text-align: center;
+
+  border: none;
+  cursor: pointer;
+
+  border-radius: var(--radius-blob-3);
+  box-shadow: var(--shadow-4);
+  transition: all 500ms var(--ease-squish-2);
+
+  &:hover {
+    border-radius: var(--radius-blob-4);
+    box-shadow: var(--shadow-6);
+  }
+
+  // making the dividers
+  > span {
+    // the second divider
+    position: relative;
+    min-height: 2.15px;
+    width: var(--size-7);
+    vertical-align: middle;
+
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      border-radius: var(--radius-1);
+      background-color: var(--pink-12);
+      transition: all 500ms var(--ease-squish-2);
+    }
+
+    // the first & the third dividers
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: var(--size-5);
+      left: var(--size-1);
+    }
+
+    &::before {
+      top: calc(var(--size-2) * -1);
+    }
+
+    &::after {
+      top: var(--size-2);
+    }
+  }
+
+  // ofcorse we should find a replacement for the focus state but it's not our topic
+  &:focus {
+    outline: none;
+  }
+
+  &:hover > span::after,
+  &:hover > span::before {
+    width: var(--size-7);
+    left: 0;
+  }
+}
+
+.nav {
+  ul {
+    display: none;
+    position: absolute;
+    inset-block: 30% auto;
+    inset-inline: 10%;
+    text-align: center;
+    list-style-type: none;
+
+    li {
+      font-family: var(--font-serif);
+      font-size: var(--font-size-fluid-3);
+      font-weight: var(--font-weight-6);
+      line-height: var(--font-lineheight-4);
+      letter-spacing: var(--font-letterspacing-4);
+      text-transform: capitalize;
+    }
+  }
+
+  // for the nav background (styling the nav itself is not our topic)
+  &[transition-style="in:custom:circle-swoop"],
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: var(--gray-8);
+    transition: all 1000ms var(--ease-squish-4);
+
+    /*
+      * create custom clip path
+      * create clip path with transition style
+    */
+    // ! clip-path: circle(30px at calc(100% - 65px) 65px);
+    clip-path: var(--circle-top-right-out);
+
+    // --transition__duration: 5s;
+
+    // for AT
+    visibility: hidden;
+  }
+}
+
+// when it gits activated
+.menu.active {
+  .nav {
+    ul {
+      display: initial;
+    }
+
+    &::before {
+      // that's all the pen about
+      // ! clip-path: circle(100%);
+      clip-path: var(--circle-bottom-right-in);
+      visibility: visible;
+    }
+  }
+
+  .nav-toggle > span {
+    height: 0;
+
+    &::after,
+    &::before {
+      top: 0;
+      left: 0;
+      width: 0;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+}

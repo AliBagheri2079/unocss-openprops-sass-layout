@@ -1,0 +1,26 @@
+/* Use Open-Props from NPM or CDN */
+
+/* @import 'open-props/style'; */
+
+/* @import 'https://unpkg.com/open-props'; */
+
+/* not needed here because JIT Props adds what you use! */
+
+/* the props */
+@import "open-props/open-props.min.css";
+
+/* optional imports that use the props */
+@import "open-props/normalize.min.css";
+@import "open-props/buttons.min.css";
+
+/* individual imports */
+@import "open-props/indigo.min.css";
+@import "open-props/easings.min.css";
+@import "open-props/animations.min.css";
+@import "open-props/sizes.min.css";
+@import "open-props/gradients.min.css";
+
+/* see PropPacks for the full list */
+
+/* transition style library import */
+@import "transition-style";
