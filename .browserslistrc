@@ -1,0 +1,15 @@
+# Browsers that we support
+
+[production]
+> 1%
+not dead
+
+[modern]
+last 1 chrome version
+last 1 firefox version
+iOS >= 12
+Safari >= 12
+not Explorer <= 11
+
+[ssr]
+node 12
