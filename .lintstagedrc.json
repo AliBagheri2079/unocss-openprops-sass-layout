@@ -1,0 +1,4 @@
+{
+  "*.{js,jsx}": ["rome format --write", "rome check --apply-unsafe"],
+  "*.scss": "stylelint --fix"
+}
