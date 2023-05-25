@@ -1,0 +1,23 @@
+@import "../fonts";
+
+@layer utils {
+  .font-avineo {
+    font-family: "Avineo", "ui-serif", "serif";
+  }
+
+  .font-monument__regular {
+    font-family: "Monument Extended Regular", "system-ui", "-apple-system",
+      "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "sans-serif";
+  }
+
+  .font-monument__ultrabold {
+    font-family: "Monument Extended Ultrabold", "system-ui", "-apple-system",
+      "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "sans-serif";
+  }
+
+  .font-moresby {
+    font-family: "Moresby", "Dank Mono", "Operator Mono", "Inconsolata",
+      "Fira Mono", "ui-monospace", "SF Mono", "Monaco", "Droid Sans Mono",
+      "Source Code Pro", "monospace";
+  }
+}
