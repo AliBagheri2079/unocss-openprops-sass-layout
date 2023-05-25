@@ -1,0 +1,19 @@
+.lenis-icon path {
+  @apply fill-none stroke-red6 stroke-width-3;
+
+  stroke-dasharray: 4800;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: draw-stroke 2s var(--delay, 0.5s) ease-in both;
+}
+
+@keyframes draw-stroke {
+  from {
+    fill-opacity: 0;
+    stroke-dashoffset: 4800;
+  }
+
+  to {
+    @apply fill-red6 stroke-transparent;
+  }
+}
