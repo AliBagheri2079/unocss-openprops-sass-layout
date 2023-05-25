@@ -7,6 +7,7 @@ const config = {
       // Optional
       content: ["src/**/*.{html,js,ts,jsx,tsx,vue,svelte,astro}"],
     },
+    "postcss-jit-props": "open-props",
     "postcss-preset-env": {
       /* use stage 3 features + css nesting rules */
       stage: 3,
